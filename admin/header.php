@@ -5,6 +5,8 @@ if(!isset($_SESSION['kadi'])){
     die('Giriş Yetkiniz Yoktur.');
 }
 
+require_once('baglan.php');
+
 ?>
 
 <!DOCTYPE html>
