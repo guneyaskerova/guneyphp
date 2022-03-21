@@ -1,0 +1,14 @@
+#adminContent li {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#adminContent li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#adminContent .col-md-2 {
+    height: 100vh;
+}
