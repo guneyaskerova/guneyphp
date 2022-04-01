@@ -28,7 +28,7 @@ $satir_duzenle = $sorgu_duzenle->fetch();
                     <div class="form-group">
                         <label>Üst Kategorisi</label>
                         <select name="ustkat" class="form-control">
-                            <option value="<?php $satir_duzenle['ustkat']; ?>"><?php $satir_duzenle['ustkat']; ?></option>
+                            <option value="<?php echo $satir_duzenle['ustkat']; ?>"><?php echo $satir_duzenle['ustkat']; ?></option>
                             <option value="-">-</option>
                             <?php
                             $sorgu_kategori = $db->prepare('select * from kategoriler where katturu = "Ana Kategori"');
@@ -51,29 +51,24 @@ $satir_duzenle = $sorgu_duzenle->fetch();
                         <button type="submit" class="btn btn-success w-100">Kaydet</button>
                     </div>
                 </form>
-               
+
                 <?php
-                
-                if($_POST){
+                if ($_POST) {
                     $kategori = $_POST['kategori'];
                     $katturu = $_POST['katturu'];
                     $ustkat = $_POST['ustkat'];
                     $meta = $_POST['meta'];
 
-                    $sorgu_guncel = $db -> prepare('update kategoriler set kategori=?,katturu=?,ustkat=?,meta=? where id=?');
-                    $sorgu_guncel -> execute(array($kategori,$katturu,$ustkat,$meta,$id));
+                    $sorgu_guncel = $db->prepare('update kategoriler set kategori=?,katturu=?,ustkat=?,meta=? where id=?');
+                    $sorgu_guncel->execute(array($kategori, $katturu, $ustkat, $meta, $id));
 
-                    if($sorgu_guncel -> rowCount()){
+                    if ($sorgu_guncel->rowCount()) {
                         echo '<div class="alert alert-success">Kayıt Güncellendi</div>';
-                    }else{
-                        echo '<div class="alert alert-danger">hata Oluştu</div>';
+                    } else {
+                        echo '<div class="alert alert-danger">Hata Oluştu</div>';
                     }
                 }
-                            
-                               
-                
                 ?>
-
 
             </div>
             <div class="col-md-9">
@@ -121,4 +116,3 @@ $satir_duzenle = $sorgu_duzenle->fetch();
 
 
 <?php require_once('footer.php'); ?>
-

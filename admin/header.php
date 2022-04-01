@@ -23,6 +23,9 @@ require_once('baglan.php');
     <link rel="stylesheet" href="../css/style.css">
 
     <title>Başlık</title>
+
+    <script src="//cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>
+
 </head>
 
 <body>
