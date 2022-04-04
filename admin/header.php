@@ -44,6 +44,7 @@ require_once('baglan.php');
                         <li><a href="kategori.php">Kategoriler</a></li>
                         <li><a href="mesajlar.php">Mesajlar</a></li>
                         <li><a href="ebulten.php">E-Bülten Üyeleri</a></li>
+                        <li><a href="ayarlar.php">Ayarlar</a></li>
                         <li><a href="logout.php">Çıkış</a></li>
                     </ul>
                 </div>
